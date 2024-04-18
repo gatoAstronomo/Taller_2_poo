@@ -15,8 +15,8 @@ public class RegistroSismatologico {
     }
     public void llenarRegistro(int dias){
 
-        for(int i = 0; i < dias; i++){
-            for(int j = 1; j < 24; j++){
+        for(int i = 1; i <= dias; i++){
+            for(int j = 1; j <= 24; j++){
                 Sismo sismo = generarSismo(i);
                 agregarSismo(sismo);
             }
