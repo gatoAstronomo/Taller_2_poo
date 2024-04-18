@@ -9,7 +9,7 @@ public class Aleatorio {
 
     public static int devolverHora(){
         Random random = new Random();
-        return random.nextInt() * 23;
+        return (int)random.nextDouble() * 23;
     }
 
     public static int devolverDia(int n){
