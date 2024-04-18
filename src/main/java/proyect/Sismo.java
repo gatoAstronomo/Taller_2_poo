@@ -12,19 +12,8 @@ public class Sismo {
     public int getDia() {
         return dia;
     }
-    public int getHora() {
-        return hora;
-    }
     public double getMagnitud() {
         return magnitud;
     }
-    public void setDia(int dia) {
-        this.dia = dia;
-    }
-    public void setHora(int hora) {
-        this.hora = hora;
-    }
-    public void setMagnitud(double magnitud) {
-        this.magnitud = magnitud;
-    }
 }
+
