@@ -2,8 +2,7 @@ package proyect;
 import java.util.Random;
 
 public class Aleatorio {
-    
-    public static double devolverTerremoto(){
+    public static double devolverMagnitud(){
         Random random = new Random();
         return random.nextDouble() * 9.5;
     }
@@ -13,9 +12,9 @@ public class Aleatorio {
         return random.nextInt() * 23;
     }
 
-    public static int devolverDia(){
+    public static int devolverDia(int n){
         Random random = new Random();
-        return random.nextInt() * 29;
+        return random.nextInt(n - 1) + 2;
     }
     
 }
