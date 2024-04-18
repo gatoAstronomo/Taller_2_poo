@@ -16,17 +16,14 @@ public class Menu {
                 opcion = scanner.nextInt();
                 switch (opcion) {
                     case 1:
-                        System.out.println("Seleccionaste la opción 1");
                         System.out.println(registro.sismoMasFuerte());
                         break;
                     case 2:
-                        System.out.println("Seleccionaste la opción 2");
+                        System.out.println(registro.SismoMayorA4(12));
                         break;
                     case 3:
-                        System.out.println("Seleccionaste la opción 3");
                         registro.vaciarRegistro();
                         registro.llenarRegistro(3);
-                        System.out.println(registro.registro);
                         break;
                     case 4:
                         System.out.println("Saliendo del programa...");

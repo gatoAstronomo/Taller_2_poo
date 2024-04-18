@@ -44,4 +44,12 @@ public class RegistroSismatologico {
     public  void vaciarRegistro(){
         registro.clear();
     }
+
+    public ArrayList<Integer> SismoMayorA4(int N){
+        ArrayList <Integer> encontrados = new ArrayList <Integer>();
+        for(int i = 0; i <= N; i++){
+            encontrados.add(cantidadPorDiayMagnitud(i, 4.0));
+        }
+        return encontrados;
+    }
 }
