@@ -16,4 +16,13 @@ public class RegistroSismatologico {
             agregarSismo(sismo);
         }
     }
+    public Sismo sismoMasFuerte(){
+        Sismo sismoMasFuerte = registro.get(0);
+        for(Sismo sismo : registro){
+            if(sismo.getMagnitud() > sismoMasFuerte.getMagnitud()){
+                sismoMasFuerte = sismo;
+            }
+        }
+        return sismoMasFuerte;
+    }
 }
