@@ -7,7 +7,11 @@ public class RegistroSismatologico {
         registro.add(sismo);
     }
     public Sismo generarSismo(){
-        // aqui se invoca el metodo para generar los datos del sismo de la rama rivas
+        // Clase Aleatorio de la rama rivas
+        double magnitud = Aleatorio.devolverMagnitud();
+        int dia = Aleatorio.devolverDia();
+        int hora = Aleatorio.devolverHora();
+        Sismo sismo = new Sismo(dia, hora, magnitud);
         return sismo;
     }
     public void llenarRegistro(int cantidadSismos){
@@ -33,5 +37,8 @@ public class RegistroSismatologico {
             }
         }
         return contador;
+    }
+    public void vaciarRegistro(){
+        registro.clear();
     }
 }
