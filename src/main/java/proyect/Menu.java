@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Menu {
 
-    public static void main(String[] args) {
+    public static void ejecutarMenu() {
         Scanner scanner = new Scanner(System.in);
         int opcion = 0;
 
@@ -34,7 +34,7 @@ public class Menu {
                 System.out.println("Error: debes ingresar un número entero.");
                 scanner.nextLine();
             }
-        } while (opcion != 0);
+        } while (opcion != 4);
 
         scanner.close();
     }
@@ -47,4 +47,5 @@ public class Menu {
         System.out.println("4. Salir del Programa");
         System.out.print("Selecciona una opción: ");
     }
+
 }
