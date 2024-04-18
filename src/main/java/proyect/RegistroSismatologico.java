@@ -6,18 +6,20 @@ public class RegistroSismatologico {
     public void agregarSismo(Sismo sismo) {
         registro.add(sismo);
     }
-    public Sismo generarSismo(){
+    public Sismo generarSismo(int dia){
         // Clase Aleatorio de la rama rivas
         double magnitud = Aleatorio.devolverMagnitud();
-        int dia = Aleatorio.devolverDia();
         int hora = Aleatorio.devolverHora();
         Sismo sismo = new Sismo(dia, hora, magnitud);
         return sismo;
     }
-    public void llenarRegistro(int cantidadSismos){
-        for(int i = 0; i < cantidadSismos; i++){
-            Sismo sismo = generarSismo();
-            agregarSismo(sismo);
+    public void llenarRegistro(int dias){
+
+        for(int i = 0; i < dias; i++){
+            for(int j = 1; j < 24; j++){
+                Sismo sismo = generarSismo(i);
+                agregarSismo(sismo);
+            }
         }
     }
     public Sismo sismoMasFuerte(){
