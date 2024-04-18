@@ -25,4 +25,13 @@ public class RegistroSismatologico {
         }
         return sismoMasFuerte;
     }
+    public int cantidadPorDiayMagnitud(int dia, double magnitud){
+        int contador = 0;
+        for(Sismo sismo : registro){
+            if(sismo.getDia() == dia && sismo.getMagnitud() >= magnitud){
+                contador++;
+            }
+        }
+        return contador;
+    }
 }
