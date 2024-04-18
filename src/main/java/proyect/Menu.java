@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Menu {
 
     public static void ejecutarMenu() {
+        RegistroSismatologico registro = new RegistroSismatologico();
         Scanner scanner = new Scanner(System.in);
         int opcion = 0;
 
@@ -16,12 +17,16 @@ public class Menu {
                 switch (opcion) {
                     case 1:
                         System.out.println("Seleccionaste la opción 1");
+                        System.out.println(registro.sismoMasFuerte());
                         break;
                     case 2:
                         System.out.println("Seleccionaste la opción 2");
                         break;
                     case 3:
                         System.out.println("Seleccionaste la opción 3");
+                        registro.vaciarRegistro();
+                        registro.llenarRegistro(3);
+                        System.out.println(registro.registro);
                         break;
                     case 4:
                         System.out.println("Saliendo del programa...");
