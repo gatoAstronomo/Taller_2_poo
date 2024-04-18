@@ -14,8 +14,10 @@ public class Menu {
             mostrarMenu();
             try {
                 opcion = scanner.nextInt();
+
                 switch (opcion) {
                     case 1:
+                        registro.llenarRegistro(3);
                         System.out.println(registro.sismoMasFuerte());
                         break;
                     case 2:
